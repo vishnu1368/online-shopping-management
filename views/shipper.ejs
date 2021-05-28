@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipper</title>
+    <link rel = "stylesheet" type = "text/css" href = "css/shipper.css">
+</head>
+<body>
+    <div class = "container">
+        <% if (list.detail.length == 0) { %>
+            <h1> Nothing to be Delivered!</h1>
+        <% } %>
+        <% if(list.error) { %>
+            <div class = "error"> Found error in passcode!</div>
+        <% } %>
+        <% for(let i = 0; i < list.detail.length; i++) { %>
+            <div class = "parent_container">
+                <div class = "first_child">
+                    <input type="text" value = "<%= list.detail[i].name.toUpperCase() %>" readonly>
+                    <input type = "text" value = "<%= list.detail[i].phone_number %>" readonly>
+                    <input type="text" value = "<%= list.detail[i].street.toUpperCase() %>" readonly>
+                    <input type="text" value = "<%= list.detail[i].city %>" readonly>
+                    <input type="text" value = "<%= list.detail[i].state %>" readonly>
+                    <input type="text" value = "<%= list.detail[i].country %>" readonly>
+                </div>
+                <div class = "second_child">
+                    <form action = "/delivered_order" method = "POST">
+                        <input type = "text" name = "passcode" class = "passcode" placeholder = "passcode">
+                        <input type = "submit" value = "Submit" class = "submit_btn">
+                    </form>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>

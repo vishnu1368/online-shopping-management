@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipper</title>
+    <link rel = "stylesheet" type = "text/css" href = "css/shipper.css">
+</head>
+<body>
+    <div class = "container">
+        <div class = "parent_container">
+            <div class = "first_child">
+                <input type="text" value = "Name" readonly>
+                <input type="text" value = "Street" readonly>
+                <input type="text" value = "City" readonly>
+                <input type="text" value = "State" readonly>
+                <input type="text" value = "Country" readonly>
+            </div>
+            <div class = "second_child">
+                <form action = "/delivered_order" method = "POST">
+                    <input type = "text" name = "passcode" class = "passcode" placeholder = "passcode">
+                    <input type = "submit" value = "Submit" class = "submit_btn">
+                </form>
+            </div>
+        </div>
+        <div class = "parent_container"></div>
+        <div class = "parent_container"></div>
+        <div class = "parent_container"></div>
+        <div class = "parent_container"></div>
+        <div class = "parent_container"></div>
+        <div class = "parent_container"></div>
+    </div>
+</body>
+</html>

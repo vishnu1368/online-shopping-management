@@ -1,0 +1,173 @@
+   ::-webkit-scrollbar{
+       width: 0;
+   }
+   input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+   body{
+        margin : 0;
+        padding: 0;
+        background-color: teal;
+    }
+    h1{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+    input:focus{
+        outline: none;
+        opacity: 1;
+    }
+    .container{
+        width: 100vw;
+        height : auto;
+        display: flex;
+        justify-content:space-around;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: flex-start;
+        align-items: center;
+    }
+    .signup_form{
+        width: 70%;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        align-content :space-around;
+        overflow-y: scroll;
+    }
+    input{
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        border-bottom-width: 0.3rem;
+        background-color: teal;
+        font-family: Verdana;
+        border-color: rosybrown;
+        font-weight: bolder;
+        text-align: center;
+        opacity: 0.7;
+    }
+    input::placeholder{
+        color : #f5fffa;
+        font-weight: normal;
+        font-size: 1.1rem;
+    }
+    #mail_error{
+        border : none;
+        font-size: 0.9rem;
+        display: none;
+    }
+    #password_error{
+        width: 50%;
+        height: 5vh;
+        display: flex;
+        justify-content: center;
+    }
+    #phone_number_error{
+            border: none;
+            font-size: 0.9rem;
+            margin-top: 0rem;
+            display: none;
+    }
+    #create_account{
+        padding: 1rem;
+        background-color: #20b2aa;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        font-weight: bolder;
+        border: none;
+    }
+    #fill_all_items{
+        border: none;
+        font-size: 1rem;
+        color: white;
+        font-weight: bolder;
+        display: none;
+    }
+
+    @media only screen and  (min-width:1024px){
+        .signup_form{
+            margin-top: 2rem;
+            width: 100%;
+        }
+        input{
+            width : 60%;
+            height: 8vh;
+            margin-bottom: 0.6rem;
+            font-size: 1.5rem;
+        }
+        #create_account{
+            font-size: 1.5rem;
+        }
+    }
+    @media only screen and  (max-width:1024px){
+        .signup_form{
+            width: 100%;
+            margin-top: 2rem;
+        }
+        input{
+            width : 70%;
+            height: 6vh;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        #create_account{
+            font-size: 1.2rem;
+        }
+
+    }
+    @media only screen and  (max-width:767px){
+        .signup_form{
+            margin-top: 1rem;
+            width: 100%;
+        }
+        input{
+            width : 85%;
+            height: 5vh;
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+        }
+        #create_account{
+            font-size: 1.2rem;
+        }
+    }
+    @media only screen and  (max-width:600px){
+        .signup_form{
+            width: 100%;
+            margin-top:1rem;
+        }
+        #password_error{
+            font-size: 0.9rem;
+            width: 100%;
+        }
+        input{
+            width : 100%;
+            height: 6vh;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+    }
+    @media only screen and  (max-width:370px){
+        .signup_form{
+            width: 100%;
+            margin-top: 1rem;
+        }
+        #password_error{
+            font-size: 0.8rem;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        input{
+            width : 100%;
+            height: 8vh;
+            font-size: 1rem;
+        }
+        #create_account{
+            font-size: 1rem;
+        }
+    }

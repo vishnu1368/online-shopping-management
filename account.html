@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type="text/css" href = "css/account.css">
+    <title>Account</title>
+</head>
+<script src = "javascript/account.js"></script>
+<body>
+
+    <div class = "container" onclick="click()">
+
+        <div class = "toggle_btn" onclick = "toggle()">
+                <span></span>
+                <span></span>
+                <span></span>
+        </div>
+
+        <div class = "nav_bar_small_screen" name = "shrink" id = "toggle_btn">
+
+                <div class = "account_option" onclick="do_submit_home()">Home
+                    <form action = "/" method="GET" hidden>
+                    <input type="submit" id = "do_submit_home">
+                    </form>
+                </div>
+
+                <div class = "account_option" onclick = "do_submit_accountinfo()">Account Info
+                    <form action = "/account-info" method="GET" hidden>
+                    <input type="submit" id = "do_submit_accountinfo">
+                    </form>
+                </div>
+
+                <div class = "account_option" onclick="do_submit_cart()">Cart
+                    <form action = "/cart" method="GET" hidden>
+                    <input type="submit" id = "do_submit_cart">
+                    </form>
+                </div>
+
+                <div class = "account_option" onclick = "do_submit_wishlist()">Wishlist
+                    <form action = "/wishlist" method="GET" hidden>
+                    <input type="submit" id = "do_submit_wishlist">
+                    </form>
+                </div>
+
+                <div class = "account_option" onclick = "do_submit_orderdetail()">Order Detail
+                    <form action = "/order-detail" method="GET" hidden>
+                    <input type="submit" id = "do_submit_orderdetail">
+                    </form>
+                </div>
+
+        </div>
+
+        <div class = "left_container">
+                <div class = "account_option" onclick="do_submit_home()">Home
+                    <form action = "/" method="GET" hidden>
+                    <input type="submit" id = "do_submit_home">
+                    </form>
+                </div>
+
+                <div class = "account_option" onclick = "do_submit_accountinfo()">Account Info
+                    <form action = "/account-info" method="GET" hidden>
+                    <input type="submit" id = "do_submit_accountinfo">
+                    </form>
+                </div>
+
+                <div class = "account_option" onclick="do_submit_cart()">Cart
+                    <form action = "/cart" method="GET" hidden>
+                    <input type="submit" id = "do_submit_cart">
+                    </form>
+                </div>
+
+                <div class = "account_option" onclick = "do_submit_wishlist()">Wishlist
+                    <form action = "/wishlist" method="GET" hidden>
+                    <input type="submit" id = "do_submit_wishlist">
+                    </form>
+                </div>
+
+                <div class = "account_option" onclick = "do_submit_orderdetail()">Order Detail
+                    <form action = "/order-detail" method="GET" hidden>
+                    <input type="submit" id = "do_submit_orderdetail">
+                    </form>
+                </div>
+
+        </div>
+
+        <div class = "right_container" id = "right_container">
+            <div class = "account_info_margin"></div>
+            <div class = "account_info_container">
+                <h1>Account Info</h1>
+                <div class = "account_name">Name : </div>
+                <div class = "account_password">Password : </div>
+                <div class = "account_mail_id">Mail : </div>
+                <div class = "account_phone_number">Phone : </div>
+                <div class = "account_street">Street : </div>
+                <div class = "account_city">City : </div>
+                <div class = "account_state">State : </div>
+                <div class = "account_country">Country : </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!-- <html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel = "stylesheet" type="text/css" href = "css/account.css"><title>Account</title></head><script src = "javascript/account.js"></script>
+<body><div class = "container"><div class = "toggle_btn" onclick = "toggle()"><span></span><span></span><span></span></div>
+<div class = "nav_bar_small_screen" name = "shrink" id = "toggle_btn"><div class = "account_option" onclick="do_submit_home()">Home
+<form action = "/" method="GET" hidden><input type="submit" id = "do_submit_home"></form></div><div class = "account_option" onclick = "do_submit_accountinfo()">Account Info
+<form action = "/account-info" method="GET" hidden><input type="submit" id = "do_submit_accountinfo"></form></div><div class = "account_option" onclick="do_submit_cart()">Cart
+<form action = "/cart" method="GET" hidden><input type="submit" id = "do_submit_cart"></form></div><div class = "account_option" onclick = "do_submit_wishlist()">Wishlist
+<form action = "/wishlist" method="GET" hidden><input type="submit" id = "do_submit_wishlist"></form></div><div class = "account_option" onclick = "do_submit_orderdetail()">Order Detail
+<form action = "/order-detail" method="GET" hidden><input type="submit" id = "do_submit_orderdetail"></form></div></div>
+<div class = "left_container"><div class = "account_option" onclick="do_submit_home()">Home<form action = "/" method="GET" hidden>
+<input type="submit" id = "do_submit_home"></form></div><div class = "account_option" onclick = "do_submit_accountinfo()">Account Info
+<form action = "/account-info" method="GET" hidden><input type="submit" id = "do_submit_accountinfo"></form></div><div class = "account_option" onclick="do_submit_cart()">Cart
+<form action = "/cart" method="GET" hidden><input type="submit" id = "do_submit_cart"></form></div><div class = "account_option" onclick = "do_submit_wishlist()">Wishlist
+<form action = "/wishlist" method="GET" hidden><input type="submit" id = "do_submit_wishlist"></form></div><div class = "account_option" onclick = "do_submit_orderdetail()">Order Detail
+<form action = "/order-detail" method="GET" hidden><input type="submit" id = "do_submit_orderdetail"></form></div></div> -->
+
+
+<!-- account_info -->
+
+<!-- <div class = "right_container" id = "right_container"><div class = "account_info_margin"></div><div class = "account_info_container">
+<h1>Account Info</h1><div class = "account_name">Name : </div><div class = "account_password">Password : </div><div class = "account_mail_id">Mail : </div>
+<div class = "account_phone_number">Phone : </div><div class = "account_street">Street : </div><div class = "account_city">City : </div>
+<div class = "account_state">State : </div><div class = "account_country">Country : </div></div></div> -->

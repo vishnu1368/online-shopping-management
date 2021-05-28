@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type="text/css" href = "css/account.css">
+    <link rel = "stylesheet" type="text/css" href ="css/product.css">
+    <link rel = "stylesheet" type ="text/css" href = "css/cart.css">
+    <style>
+        /* 370 600 767 1024 */
+        body{
+            background-color: teal;
+        }
+        .wishlist_btn{
+            background-color: red;
+        }
+        .nothing_wishlist{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* 370 600 767 1024 */
+        @media only screen and (min-width : 1024px){
+            .nothing_wishlist{
+                font-size: 4rem;
+                font-weight: bold;
+            }
+        }
+        @media only screen and (max-width : 1024px){
+            .nothing_wishlist{
+                font-size: 3rem;
+                font-weight: bold;
+            }
+        }
+        @media only screen and (max-width : 767px){
+            .nothing_wishlist{
+                font-size: 2.3rem;
+                font-weight: bold;
+            }
+        }
+        @media only screen and (max-width : 600px){
+            .container{
+                margin-top: 3vh;
+                font-weight: bold;
+            }
+            .toggle_btn{
+                top : 0;  /*as left-container has position : fixed*/
+            }
+            .nothing_wishlist{
+                font-size: 2.2rem;
+            }
+        }
+        @media only screen and (max-width : 370px){
+            .nothing_wishlist{
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+        }
+    </style>
+    <title>Account</title>
+</head>
+<script src = "javascript/account.js"></script>
+<script src = "javascript/product.js"></script>
+<script src = "javascript/cart.js"></script>
+<script src = "javascript/wishlist.js"></script>
+
+<body onload = "clean_removelist()">
+
+    <div class = "container">
+
+        <div class = "toggle_btn" onclick = "toggle()">
+                <span></span>
+                <span></span>
+                <span></span>
+        </div>
+
+        <div class = "nav_bar_small_screen" name = "shrink" id = "toggle_btn">
+
+                <div class = "account_option" onclick="do_submit_home()">Home
+                    <form action = "/" method="GET" hidden>
+                    <input type="submit" id = "do_submit_home">
+                    </form>
+                </div>
+
+                <div class = "account_option" onclick = "do_submit_accountinfo()">Account Info
+                    <form action = "/account-info" method="GET" hidden>
+                    <input type="submit" id = "do_submit_accountinfo">
+                    </form>
+                </div>
+
+                <div class = "account_option" onclick="do_submit_cart()">Cart
+                    <form action = "/cart" method="GET" hidden>
+                    <input type="submit" id = "do_submit_cart">
+                    </form>
+                </div>
+
+                <div class = "account_option" onclick = "do_submit_wishlist()">Wishlist
+                    <form action = "/wishlist" method="GET" hidden>
+                    <input type="submit" id = "do_submit_wishlist">
+                    </form>
+                </div>
+
+                <div class = "account_option" onclick = "do_submit_orderdetail()">Order Detail
+                    <form action = "/order-detail" method="GET" hidden>
+                    <input type="submit" id = "do_submit_orderdetail">
+                    </form>
+                </div>
+
+        </div>
+
+        <div class = "left_container">
+                <div class = "account_option" onclick="do_submit_home()">Home
+                    <form action = "/" method="GET" hidden>
+                    <input type="submit" id = "do_submit_home">
+                    </form>
+                </div>
+
+                <div class = "account_option" onclick = "do_submit_accountinfo()">Account Info
+                    <form action = "/account-info" method="GET" hidden>
+                    <input type="submit" id = "do_submit_accountinfo">
+                    </form>
+                </div>
+
+                <div class = "account_option" onclick="do_submit_cart()">Cart
+                    <form action = "/cart" method="GET" hidden>
+                    <input type="submit" id = "do_submit_cart">
+                    </form>
+                </div>
+
+                <div class = "account_option" onclick = "do_submit_wishlist()">Wishlist
+                    <form action = "/wishlist" method="GET" hidden>
+                    <input type="submit" id = "do_submit_wishlist">
+                    </form>
+                </div>
+
+                <div class = "account_option" onclick = "do_submit_orderdetail()">Order Detail
+                    <form action = "/order-detail" method="GET" hidden>
+                    <input type="submit" id = "do_submit_orderdetail">
+                    </form>
+                </div>
+        </div>
+        
+        <div class = "right_container" id = "right_container">
+            <div class = "container">
+                <% if(list.length == 0){%>
+                        <div class = "nothing_wishlist">Nothing in Wishlist!</div>
+                <% }%>
+
+                <% for (var i = 0; i < list.length; i++) { %>
+                    <div class = "parent_container" id = "parent_container">
+                        <div class = "first_child" >
+                            <img src = "<%= list[i].location %>" alt = "img" style ="width: 100%;height: 100%;">
+                        </div>
+                        <div class = "second_child" id = "second_child_container">
+                            <input type = "text" value = "<%=list[i].name%>" class = "product_name" readonly>
+                            <input type = "text" value = "<%=list[i].price%>(Per Unit)" class = "product_price" readonly>
+                            <input type="button" name = "<%=list[i].product_id%>" value="Add To cart" class = "cart_btn" onclick="cart_btn_change(this)">
+                            <input type = "text" value = "Review : <%=list[i].review.toFixed(1)%>" class = "review" readonly>
+                            <input type = "text" value = "Reviewers : <%=list[i].review_count%>" class = "review_count" readonly>
+                            <input type = "button" value = "Boring" class = "wishlist_btn" onclick = "wishlist_product_opposite(this, '<%= list[i].product_id %>')">
+                        </div>
+                    </div>
+                <% } %>
+            
+                <% if(list.length != 0) { %>
+                    <div class = "generate_margin"></div>
+                
+                    <div class = "footer">
+                        <div class = "placeorder" onclick = "update_wishlist()">Update Wishlist
+                            <form action="/remove_wishlist" method="POST" hidden>
+                                <textarea rows="10" cols="10" name = "remove_wishlist" id="remove_wishlist" hidden></textarea>
+                                <input type="submit"  id = "wishlist_submit">
+                            </form>
+                        </div>
+                    </div>
+                <% } %>
+
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel = "stylesheet" type = "text/css" href = "css/signup.css">
+    <style>
+        #password_error{
+            display: none;
+        }
+        #mail_error{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>SIGNUP</h1>
+    <div class = "container">
+        <form action="/signup" method="POST" class = "signup_form">
+            <input type = "text" id = "fill_all_items" value = "Must fill All details">
+            <input type = "text" id = "name" value = "<%= list.name %>" name = "name" placeholder = "name">
+            <input type = "text" id = "mail" value = "<%= list.mail %>" name = "mail" placeholder = "mail">
+            <input type = "text" id = "mail_error" id = "mail" value = "Email already registered" readonly>
+            <input type = "text" id = "password" value = "<%= list.password %>" name = "password"  placeholder = "password">
+            <div id = "password_error">Should have atleast one special character & min 8 character</div>
+            <input type="number" id = "phone_number" value = "<%= list.phone %>" name = "phone_number" placeholder = "phone Number">
+            <!-- <input type = "text" id = "phone_number_error" value = "Phone is not valid" readonly> -->
+            <input type = "text" id = "street" value = "<%= list.street %>" name = "street" placeholder = "street">
+            <input type = "text" id = "city" value = "<%= list.city %>" name = "city" placeholder = "city">
+            <input type = "text" id = "state" value = "<%= list.state %>" name = "state" placeholder = "state">
+            <input type = "text" id = "country" value = "<%= list.country %>" name = "country" placeholder = "country">
+            <input type = "submit" id = "submit_signup" hidden>
+        </form>
+        <button  id = "create_account" onclick = "validate()">Create Account</button>
+    </div>
+    <script src="javascript/signup.js"></script>
+</body>
+</html>

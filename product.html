@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width initial-scale = 1.0">
+        <link rel = "stylesheet" type="text/css" href="css/product.css">
+    </head>
+
+    <script src = "javascript/product.js"></script>
+
+    <body style="background-color: teal;">
+        <div class = "container"> 
+            
+            <div class = "navigation">
+                <div class = "navigation_container">
+                    <form action="/account" method="POST" class="form_account_btn">
+                        <input type = "submit" class = "account_btn" value = "Account">
+                        <textarea rows="10" cols="10" id="account_wishlist" name = "wishlist" hidden></textarea>
+                    </form>
+                    <div class = "search">
+                        <form method = "post" action = "/search" class="form_search">
+                            <input type = "text" class = "search_txt" name = "search" placeholder="Search here">
+                            <textarea rows="10" cols="10" id = "wishlist" name = "wishlist" hidden></textarea>
+                            <button type = "submit" class = "search_btn">Search</button> 
+                        </form>
+                    </div>
+                    <input type = "button" class = "home_btn" value = "Home">
+                </div>
+            </div>
+
+            <!-- <div class = "overview">
+                Welcome to Online Shopping! 
+            </div> -->
+            
+        </div>
+
+    </body>
+</html>

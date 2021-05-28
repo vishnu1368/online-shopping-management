@@ -1,0 +1,55 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: teal;
+}
+form{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content:space-around;
+}
+div{
+    width: 50%;
+    height: 20%;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    cursor: pointer;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+    @media only screen and (max-width:1024px){
+        div{
+            width: 60%;
+            height : 20%;
+            font-size: 2.5rem;
+        }        
+    }
+    @media only screen and (max-width:747px){
+        div{
+            width : 70%;
+            height: 20%;
+            font-size: 2.3rem;
+        }   
+    }
+    @media only screen and (max-width:600px){
+        div{
+            width : 80%;
+            height: 17%;
+            font-size: 2rem;
+        }
+    }
+    @media only screen and (max-width:370px){
+        div{
+            width : 90%;
+            height: 15%;
+            font-size: 1.8rem;
+        }
+    }

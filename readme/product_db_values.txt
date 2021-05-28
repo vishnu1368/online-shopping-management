@@ -1,0 +1,34 @@
+insert into product values('1','Turmeric', 10, 1000, 0, 0, 'home turmeric dailyuse all','img/1.jpg');
+insert into product values('2','sugar', 40, 1000, 0, 0, 'home sugar dailyuse all','img/2.jpg');
+insert into product values('3','coffee powder', 30, 1000, 0, 0, 'home coffee coffeepowder dailyuse all','img/3.jpg');
+insert into product values('4','colgate Paste', 10, 1000, 0, 0, 'home colgate paste dailyuse all','img/4.jpg');
+insert into product values('5','ToothBrush', 10, 1000, 0, 0, 'home brush toothbrush dailyuse all','img/5.png');
+insert into product values('6','coconut Oil', 50, 1000, 0, 0, 'home coconutoil coconut oil dailyuse all','img/6.jpg');
+insert into product values('7','Groundnut oil', 80, 1000, 0, 0, 'home groundoil oil dailyuse all','img/7.jpg');
+insert into product values('8','Gingelly oil', 100, 1000, 0, 0, 'home gingellyoil oil dailyuse all','img/8.jpg');
+insert into product values('9','Dairy milk', 10, 1000, 0, 0, 'home dairy milk dairymilk chocolate dailyuse all','img/9.jpg');
+insert into product values('10','Milky Bar', 10, 1000, 0, 0, 'home milky bar milkybar chocolate dailyuse all','img/10.jpg');
+insert into product values('11','Dark Fantasy', 20, 1000, 0, 0, 'home dark fantasy chocolate dailyuse all','img/11.jpg');
+insert into product values('12','Milk bikis', 10, 1000, 0, 0, 'home milk bikis biscuit dailyuse all','img/12.jpg');
+insert into product values('13','Marie Gold', 10, 1000, 0, 0, 'home marie gold biscuit dailyuse all','img/13.jpg');
+insert into product values('14','Rusk', 10, 1000, 0, 0, 'home rush biscuit dailyuse all','img/14.jpg');
+insert into product values('15','notebook', 10, 1000, 0, 0, 'stationary notebook all','img/15.jpg');
+insert into product values('16','pencil', 3.4, 1000, 0, 0, 'stationary pencil all','img/16.jpg');
+insert into product values('17','eraser', 2.3, 1000, 0, 0, 'stationary eraser all','img/17.jpg');
+insert into product values('18','Sharpenser', 3.5, 1000, 0, 0, 'stationary sharpener all','img/18.jpg');
+insert into product values('19','Pen', 10, 1000, 0, 0, 'stationary pen all','img/19.jpg');
+
+insert into product values('20','Bril ink bottle', 10, 1000, 0, 0, 'stationary inkbottle ink bottle all','img/20.jpg');
+insert into product values('21','JBL headphone', 500, 1000, 0, 0, 'electronics headphone JBL all','img/21.jpg');
+insert into product values('22','USB cables', 100, 1000, 0, 0, 'electronics USB cabels usbcables all','img/22.jpg');
+insert into product values('23','Mi note 5 pro', 10000, 1000, 0, 0, 'electronics phone mi note 5 pro all','img/23.jpg');
+insert into product values('24','Laptop', 100000, 1000, 0, 0, 'laptop electronics hp all','img/24.jpg');
+
+insert into product values('25','Mobile charger', 200, 1000, 0, 0, 'electronics charger mobilecharger all','img/25.jpg');
+insert into product values('26','Junction box', 100, 1000, 0, 0, 'electronics junctionbox junction all','img/26.jpg');
+
+insert into product values('27','Iron box', 1000, 1000, 0, 0, 'electronics iron box all','img/27.jpg');
+insert into product values('28','Cotton Towel', 300, 1000, 0, 0, 'textile men silks cotton towel cottontowel all','img/28.jpg');
+insert into product values('29','t-shirt', 600, 1000, 0, 0, 'textile silks men t-shirts tshirt shirt all','img/29.jpg');
+insert into product values('30','chudidar', 1000, 1000, 0, 0, 'textil women silks textile chudidar all','img/30.jpg');
+insert into product values('31','pant', 400, 1000, 0, 0, 'textile silks pant men all','img/31.jpg');

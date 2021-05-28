@@ -1,0 +1,326 @@
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            display:flex;
+            justify-content:space-between;
+            width: 100vw;
+            height: auto;
+        }
+        .left_container{
+            display: flex;
+            justify-content:space-around;
+            width: 25vw;
+            height: 100vh;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            align-content:space-between;
+            background-color: #5f9ea0;
+            position: fixed; /*changed for cart*/
+            top : 0;
+        }
+
+        .right_container{
+            width: 65vw;
+            height: 100vh;
+            display: flex;
+            justify-content: space-between;
+            background-color: teal;
+            margin-left: 30vw;  /*changed for cart*/
+        }
+        
+        .account_option{
+            width: 25vw;
+            height : 15vh;
+            background-color:#43b3ae;
+            font-weight: bolder;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        /* account info css */
+        .account_info_container h1{
+            text-align: center;
+        }
+        .account_name{
+            width: 100%;
+            height : 10vh;
+            font-weight: bolder;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            
+        }
+        .account_password{
+            width: 100%;
+            height : 10vh;
+            font-weight: bolder;
+            font-size: 1.2rem;
+            
+        }
+        .account_mail_id{
+            width: 100%;
+            height : 10vh;
+            font-weight: bolder;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+        .account_phone_number{
+            width: 100%;
+            height : 10vh;
+            font-weight: bolder;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+        .account_street{
+            width: 100%;
+            height : 10vh;
+            font-weight: bolder;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+        .account_city{
+            width: 100%;
+            height : 10vh;
+            font-weight: bolder;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+        .account_state{
+            width: 100%;
+            height : 10vh;
+            font-weight: bolder;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+        .account_country{
+            width: 100%;
+            height : 10vh;
+            font-weight: bolder;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+        .account_info_margin{
+            height : 100vh;
+            width:30%;
+            background-color: #A0CFEC;
+        }
+        .account_info_container{
+            height: auto;
+            width: 60%;
+        }
+
+        .toggle_btn{
+            width: 100vw;
+            height: 6vh;
+            position: absolute;
+            background-color: cornflowerblue;
+            display: none;
+        }
+        .toggle_btn span{
+            display: block;
+            width: 4.7vw;
+            margin-left: 1rem;
+            height: 0.5vh;
+            background-color: yellow;
+            margin-bottom: 0.2rem;
+            margin-top: 0.3rem;
+        }
+        .nav_bar_small_screen{
+            display: none;
+            margin-top: 4.5vh;
+            width: 100vw;
+            height: 100vh;
+            background-color: darkblue;
+        }
+        
+
+         /* 370 600 767 1024 */
+         @media only screen and (min-width : 1024px){
+            .left_container{
+                font-size: 1.3rem;
+            }
+            .account_info_container{
+                font-size: 1.3rem;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            .account_name{
+                font-size: 1.6rem;                   
+            }   
+            .account_mail_id{
+                font-size: 1.6rem;
+            }
+            .account_password{
+                font-size: 1.6rem;
+            }
+            .account_phone_number{
+                font-size: 1.6rem;
+            }
+            .account_street{
+                font-size: 1.6rem;                   
+            }
+            .account_city{
+                font-size: 1.6rem;               
+            }
+            .account_state{
+                font-size: 1.6rem;
+            }
+            .account_country{
+                font-size: 1.6rem;
+            }
+        }
+
+        @media only screen and (max-width : 1024px){
+            .left_container{
+                font-size: 1.2rem;
+            }
+            .account_info_container{
+                font-size: 1.2rem;
+                width: 80%;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            .account_info_margin{
+                width: 15%;
+            }
+            .account_name{
+                font-size: 1.4rem;                   
+            }   
+            .account_mail_id{
+                font-size: 1.4rem;
+            }
+            .account_password{
+                font-size: 1.4rem;
+            }
+            .account_phone_number{
+                font-size: 1.4rem;
+            }
+            .account_street{
+                font-size: 1.4rem;                   
+            }
+            .account_city{
+                font-size: 1.4rem;               
+            }
+            .account_state{
+                font-size: 1.4rem;
+            }
+            .account_country{
+                font-size: 1.4rem;
+            }
+        }
+
+        @media only screen and (max-width : 767px){
+            .left_container{
+                font-size: 1.1rem;
+            }
+            .account_info_container{
+                font-size: 1.1rem;
+            }
+            .account_name{
+                font-size: 1.2rem;                   
+            }   
+            .account_mail_id{
+                font-size: 1.2rem;
+            }
+            .account_password{
+                font-size: 1.2rem;
+            }
+            .account_phone_number{
+                font-size: 1.2rem;
+            }
+            .account_street{
+                font-size: 1.2rem;                   
+            }
+            .account_city{
+                font-size: 1.2rem;               
+            }
+            .account_state{
+                font-size: 1.2rem;
+            }
+            .account_country{
+                font-size: 1.2rem;
+            }
+        }
+
+        @media only screen and (max-width : 600px){
+            .left_container{
+                display: none;
+            }
+            .right_container{
+                margin: 3vh 0vh;
+                width: 100vw;
+            }
+            .account_option{
+                width: 100vw;
+                height : 8vh;
+                background-color:dimgrey;
+                margin: 0.04rem 0rem;
+            }
+            .toggle_btn{
+                display: block;
+            }
+            .account_info_container{
+                font-size: 0.9rem;
+            }
+            .account_name{
+                font-size: 1.2rem;                   
+            }   
+            .account_mail_id{
+                font-size: 1.2rem;
+            }
+            .account_password{
+                font-size: 1.2rem;
+            }
+            .account_phone_number{
+                font-size: 1.2rem;
+            }
+            .account_street{
+                font-size: 1.2rem;                   
+            }
+            .account_city{
+                font-size: 1.2rem;               
+            }
+            .account_state{
+                font-size: 1.2rem;
+            }
+            .account_country{
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media only screen and (max-width : 370px){
+                .account_info_margin{
+                    display: none;
+                }
+                .account_info_container{
+                    width: 100%;
+                    /* margin-top: 6vh; */
+                    font-size: 0.8rem;
+                }
+                .account_name{
+                    font-size: 1rem;                   
+                }   
+                .account_mail_id{
+                    font-size: 1rem;
+                }
+                .account_password{
+                    font-size: 1rem;
+                }
+                .account_phone_number{
+                    font-size: 1rem;
+                }
+                .account_street{
+                    font-size: 1rem;                   
+                }
+                .account_city{
+                    font-size: 1rem;               
+                }
+                .account_state{
+                    font-size: 1rem;
+                }
+                .account_country{
+                    font-size: 1rem;
+                }
+        }

@@ -1,0 +1,111 @@
+        .footer{
+            display: flex;
+            width : 70%;
+            height : 8vh;
+            justify-content: space-around;
+            align-items: center;
+            background-color: cadetblue;
+            position: fixed;
+            bottom: 0;
+        }
+        .total_amount{
+            width: 35%;
+            height: 6vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:#228b22;
+            color: white;
+            font-family:Verdana;
+            font-weight: bolder;
+        }
+        .placeorder{
+            width: 23%;
+            height: 6vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #c20000;
+            color: white;
+            font-family: Verdana;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+        .generate_margin{
+            width: 100%;
+            height : 10vh;
+        }
+        .nothing_wishlist{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 370 600 767 1024 */
+        @media only screen and (min-width:1024px){
+            .total_amount{
+                font-size: 1.1rem;
+            }
+            .placeorder{
+                font-size: 1.1rem;
+            }
+            .nothing_wishlist{
+                font-size: 4rem;
+                font-weight: bold;
+            }
+        }
+        @media only screen and (max-width:1024px){
+            .total_amount{
+                font-size: 1rem;
+            }
+            .placeorder{
+                font-size: 1rem;
+            }
+            .nothing_wishlist{
+                font-size: 3rem;
+                font-weight: bold;
+            }
+        }
+        @media only screen and (max-width:767px){
+            .total_amount{
+                font-size: 0.9rem;
+            }
+            .placeorder{
+                font-size: 0.9rem;
+            }
+            .nothing_wishlist{
+                font-size: 2.3rem;
+                font-weight: bold;
+            }
+        }
+        @media only screen and (max-width:600px){
+            .footer{
+                width: 100%;
+            }
+            .total_amount{
+                font-size: 0.8rem;
+            }
+            .placeorder{
+                font-size: 0.8rem;
+            }
+            .nothing_wishlist{
+                font-size: 2.2rem;
+            }
+        }
+        @media only screen and (max-width:370px){
+            .total_amount{
+                font-size: 0.7rem;
+                width: 48%;
+                text-align: center;
+            }
+            .placeorder{
+                width: 48%;
+                font-size: 0.7rem;
+            }
+            .nothing_wishlist{
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+        }

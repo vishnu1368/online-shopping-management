@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Of User</title>
+    <link rel = "stylesheet" type = "text/css" href="css/type_of_user.css">
+</head>
+    <script>
+        function fill_choose(choice){
+            document.getElementById("choosen").value = choice
+            document.getElementById("user_select_submit").click()
+        }    
+    </script>
+<body>
+        <form action = "/user_choose" method="POST">
+            <div onclick = "fill_choose('customer')">Customer</div>
+            <div onclick = "fill_choose('shipper')">Shipper</div>
+            <input type = "text" name = "choosen" id = "choosen" hidden>
+            <input type="submit" id = "user_select_submit" hidden>
+        </form>
+</body>
+</html>

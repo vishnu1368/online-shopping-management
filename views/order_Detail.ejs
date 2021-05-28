@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type="text/css" href = "css/account.css">
+    <link rel = "stylesheet" type="text/css" href ="css/product.css">
+    <link rel = "stylesheet" type ="text/css" href = "css/cart.css">
+    <link rel = "stylesheet" type="text/css" href = "css/order_detail.css">
+    <style>
+        /* 370 600 767 1024 */
+        body{
+            background-color: #92C7C7;
+        }
+        @media only screen and (max-width : 600px){
+            .container{
+                margin-top: 3vh;
+            }
+            .toggle_btn{
+                top : 0;  /*as left-container has position : fixed*/
+            }
+        }
+    </style>
+    <title>Account</title>
+</head>
+<script src = "javascript/account.js"></script>
+<script src = "javascript/product.js"></script>
+<script src = "javascript/cart.js"></script>
+<script src = "javascript/order_detail.js"></script>
+
+<body>
+
+    <div class = "container">
+
+        <div class = "toggle_btn" onclick = "toggle()">
+                <span></span>
+                <span></span>
+                <span></span>
+        </div>
+
+        <div class = "nav_bar_small_screen" name = "shrink" id = "toggle_btn">
+
+                <div class = "account_option" onclick="do_submit_home()">Home
+                    <form action = "/" method="GET" hidden>
+                    <input type="submit" id = "do_submit_home">
+                    </form>
+                </div>
+
+                <div class = "account_option" onclick = "do_submit_accountinfo()">Account Info
+                    <form action = "/account-info" method="GET" hidden>
+                    <input type="submit" id = "do_submit_accountinfo">
+                    </form>
+                </div>
+
+                <div class = "account_option" onclick="do_submit_cart()">Cart
+                    <form action = "/cart" method="GET" hidden>
+                    <input type="submit" id = "do_submit_cart">
+                    </form>
+                </div>
+
+                <div class = "account_option" onclick = "do_submit_wishlist()">Wishlist
+                    <form action = "/wishlist" method="GET" hidden>
+                    <input type="submit" id = "do_submit_wishlist">
+                    </form>
+                </div>
+
+                <div class = "account_option" onclick = "do_submit_orderdetail()">Order Detail
+                    <form action = "/order-detail" method="GET" hidden>
+                    <input type="submit" id = "do_submit_orderdetail">
+                    </form>
+                </div>
+
+        </div>
+
+        <div class = "left_container">
+                <div class = "account_option" onclick="do_submit_home()">Home
+                    <form action = "/" method="GET" hidden>
+                    <input type="submit" id = "do_submit_home">
+                    </form>
+                </div>
+
+                <div class = "account_option" onclick = "do_submit_accountinfo()">Account Info
+                    <form action = "/account-info" method="GET" hidden>
+                    <input type="submit" id = "do_submit_accountinfo">
+                    </form>
+                </div>
+
+                <div class = "account_option" onclick="do_submit_cart()">Cart
+                    <form action = "/cart" method="GET" hidden>
+                    <input type="submit" id = "do_submit_cart">
+                    </form>
+                </div>
+
+                <div class = "account_option" onclick = "do_submit_wishlist()">Wishlist
+                    <form action = "/wishlist" method="GET" hidden>
+                    <input type="submit" id = "do_submit_wishlist">
+                    </form>
+                </div>
+
+                <div class = "account_option" onclick = "do_submit_orderdetail()">Order Detail
+                    <form action = "/order-detail" method="GET" hidden>
+                    <input type="submit" id = "do_submit_orderdetail">
+                    </form>
+                </div>
+        </div>
+        
+        <div class = "right_container">
+            
+            <div class = "order_container">
+                <% if(list.length == 0){ %>
+                    <h1 class = "no_order"> You Haven't placed any order yet!</h1>
+                <% } %>
+                <% for (var  i = 0; i < list.length; i++) {%>
+                <div class = "overview_order_detail" onclick="make_visible('<%=(i + 1)%>')" > <!-- displays the ordered date and status -->
+                    <div class = "order_date"><%=list[i].date%></div>
+                    <div class = "order_status"><%=list[i].status%></div>
+                    <div class = "order_amount"><%=list[i].totalamount%></div>
+                </div>
+
+                <div class = "each_order_detail" id = "container<%=(i + 1)%>"> 
+                    
+                    <% for (var j = 0; j < list[i].detail.length; j++){ %>
+                        
+                        <div class = "parent_container" id = "parent_container">
+                            <div class = "first_child" >
+                                <img src = "<%= list[i].detail[j].location %>" alt="img" style ="height: 100%; width: 100%;">
+                            </div>
+                            <div class = "second_child" id = "second_child_container">
+                                <input type = "text" value = "<%=list[i].detail[j].name%>" class = "product_name" readonly>
+                                <input type = "text" value = "<%=list[i].detail[j].price%>" class = "product_price" readonly>
+                            </div>
+                        </div>
+
+                    <% } %>
+
+                </div> 
+                <% } %>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

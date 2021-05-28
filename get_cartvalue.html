@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function do_submit(){
+            // window.alert(sessionStorage.getItem("cart"));
+            var x = sessionStorage.getItem("cart")
+            if(x == null){
+                x = []
+                x = JSON.stringify(x)
+            }
+            document.getElementById("cart_value").value = x
+            document.getElementById("btn").click()
+        }
+    </script>
+</head>
+<body onload = "do_submit()">
+    <form action = '/show_cart' method="POST" hidden>
+        <input type ="text" name = "cart_added_list" id = "cart_value" hidden>
+        <input type="submit" id = "btn">
+    </form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .cls{
+            background-color: green;
+            padding: 1.2rem;
+        }
+        input:focus{
+            outline: none;
+        }
+    </style>
+</head>
+
+<script>
+    function change(x){
+        x.style.color = 'white'
+        if(x.style.backgroundColor != 'red'){
+            x.style.backgroundColor = 'red'
+        }
+        else{
+            x.style.backgroundColor = 'green'
+        }
+    }
+</script>
+
+<body>
+    <input type = "text" value = "wef" style="border-top: none; border-left: none; border-right: none;">
+    <input type = "button" value="click me" class = "cls" onclick="change(this)"> 
+</body>
+</html>

@@ -1,0 +1,18 @@
+	First create the database with mysql preferred(server version : 8.0.23)
+	Enter values for teh product tabel.(given in this folder) 
+	now, we have done with database.
+
+	install visual studio
+	install nodejs, 
+	install express, nodemailer, mysql, 
+
+	download the attached files.Make sure you download and store in the same folder like me.
+	Make sure you have downloaded the image folder.
+	
+	go to get_dbconnection.js in public/javascript/get_dbconnection.js. change connection information to your requirements.
+	also, do changes to mailer.js. so that you can receive the mail regarding purchase
+
+	run app.js
+	
+	
+	

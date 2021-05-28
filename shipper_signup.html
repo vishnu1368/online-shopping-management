@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel = "stylesheet" type = "text/css" href = "css/signup.css">
+</head>
+
+<body>
+    <h1>SIGNUP</h1>
+    <div class = "container">
+        <form action="/shipper_signup" method="POST" class = "signup_form">
+            <input type = "text" id = "fill_all_items" value = "Must fill All details" >
+            <input type = "text" id = "name" name = "name" placeholder = "name">
+            <input type = "text" id = "mail" name = "mail" placeholder = "mail">
+            <input type = "text" id = "mail_error" id = "mail" value = "Email not valid" readonly>
+            <input type = "text" id = "password" name = "password"  placeholder = "password">
+            <div id = "password_error">Should have atleast one special character & min 8 character</div>
+            <!-- <input type="number" id = "phone_number" name = "phone_number" placeholder = "phone Number"> -->
+            <!-- <input type = "text" id = "phone_number_error" value = "Phone is not valid" readonly> -->
+            <!-- <input type = "text" id = "street" name = "street" placeholder = "street"> -->
+            <input type = "text" id = "city" name = "city" placeholder = "city">
+            <input type = "text" id = "state"  name = "state" placeholder = "state">
+            <input type = "text" id = "country" name = "country" placeholder = "country">
+            <input type = "submit" id = "submit_signup" hidden>
+        </form>
+        <button  id = "create_account" onclick = "validate()">Create Account</button>
+    </div>
+    <script src="javascript/shipper_signup.js"></script>
+</body>
+</html>

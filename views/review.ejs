@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <link rel = "stylesheet" type = "text/css" href = "css/product.css">
+    <link rel = "stylesheet" type = "text/css" href = "css/review.css">
+</head>
+<script src="javascript/review.js"></script>
+<body>
+    <div class = "header"><h1>Review Section</h1></div>
+    <form action="/review_customer" method="POST">
+        <div class = "container"> 
+            <% for (let i = 0; i < list.length; i++) { %>
+                <div class = "parent_container" id = "parent_container">
+                    <div class = "first_child" >
+                        <img src = "<%= list[i].location %>" alt = "img" style ="width: 100%;height: 100%;">
+                    </div>
+                    <div class = "second_child" id = "second_child_container">
+                        
+                        <div class = "review_product_name">
+                            <label class = "label_name">Name</label>
+                            <input type = "text" value = "<%= list[i].name %>" readonly>
+                        </div>
+
+                        <div class = "review_product_rating">
+                            <label class = "label_rating">Ratings(0-5)</label>
+                            <input type = "number" name = "<%= list[i].id %>" value = "0" min = "0" max ="5" step = "0.1" id = "<%=list[i].id%>" onkeyup = "validate_review('<%= list[i].id%>')">
+                        </div>
+
+                    </div>
+                </div>
+            <% } %>
+
+            <div class = "footer">
+                <div class = "place_review" onclick = "do_submit()">Place Review</div>
+            </div>
+            
+                <input type = "submit" id = "review_submit" hidden>
+        </div>
+    </form>
+
+</body>
+</html>

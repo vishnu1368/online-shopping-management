@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel = "stylesheet" type = "text/css" href = "css/login.css">
+</head>
+<script src="javascript/shipper_login.js"></script>
+<body>
+    <div class = container>
+        <div class = "login_title">Login</div>
+        <div class = "login_info">   
+            <form method="post" action = "/shipper_login" class = "login_form">
+                <input type = "email" name = "mail_id" id = "mail" placeholder="Email" required>
+                <input type = "text" id = "mail_error" value = "Email not valid"readonly>
+                <input type = "text" name = "password" id = "password" placeholder="Password" required>
+                <div id = "password_error">Should have atleast one special character & min 8 character</div>
+                <input type = "button" class = "login_submit" onclick = "validate()" value = "Login"> 
+                <input type = "submit" id = "submit_btn" hidden> 
+            </form>
+        </div>
+        <div class = "footer">
+            <div class = "forgotpassword" onclick = "submit_forgotpassword()">Forgot Password</div>
+            <div class = "new_user" onclick = "submit_signup()">New User</div>
+        </div>
+        <form action="/shipper_forgotpassword" method="get" hidden><input type="submit" id = "forgotpassword_submit"></form>
+        <form action="/shipper_signup" method="get" hidden><input type="submit" id = "signup_submit"></form>
+    </div>
+</body>
+</html>

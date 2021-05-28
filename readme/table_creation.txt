@@ -1,0 +1,54 @@
+create table customer (
+    name varchar(20) NOT NULL,
+    password varchar(20) NOT NULL,
+    mail_id varchar(50) NOT NULL PRIMARY KEY,
+    phone_number bigint(20) NOT NULL,
+    wishlist json not null,
+    street varchar(20) NOT NULL,
+    city text(20) NOT NULL,
+    state text(20) NOT NULL,
+    country text(20) NOT NULL
+);
+
+
+ create table product (
+    product_id  varchar(30) NOT NULL PRIMARY KEY,
+    name varchar(30) NOT NULL,
+    price double(10,2) NOT NULL,
+    quantity bigint(20) NOT NULL,
+    review float(10,7),
+    review_count bigint(20) not null,
+    description text(300) NOT NULL,
+    location text(300) not null
+);
+
+
+
+create table shipper(
+    name varchar(30) NOT NULL,
+    mail_id varchar(30) NOT NULL,
+    password varchar(30) NOT NULL,
+    city text(20) NOT NULL,
+    state text(20) NOT NULL,
+    country text(20) NOT NULL,
+    primary key(mail_id)
+);
+
+
+create table orders (
+    customer_id varchar(100) not null,
+     shipper_id varchar(100) not null,
+     status boolean not null,
+     detail json not null,
+     time time not null,
+     date date not null
+     foreign key (customer_id) references customer(mail_id),
+     foreign key (shipper_id) references shipper(mail_id),
+     primary key(customer_id, time, date)
+);
+
+
+
+
+
+

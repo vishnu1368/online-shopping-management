@@ -1,0 +1,236 @@
+    
+    ::-webkit-scrollbar{ /* note when display is set to none it removes drop down scrool bar also*/
+        width: 0rem;
+    }
+    
+    .right_container{
+        width: 100%;
+        height: 100px;
+        margin-right: 0rem;
+    }
+    .order_container{
+        width: 100%;
+        height : auto;
+        background-color: #92C7C7;
+    }
+    .overview_order_detail{
+        width: 100%;
+        height : 5vh;
+        margin-top: 1rem;
+        background-color: #826de8;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: flex-start;
+        cursor: pointer;
+    }
+    .overview_order_detail:hover .tooltiptext {
+        visibility: visible;
+      }
+    .order_date{
+        width: 30%;
+        height: 5vh;
+        background-color: #f0ffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bolder;
+        font-family: Verdana;
+    }
+    .order_status{
+        width: 30%;
+        height: 5vh;
+        background-color: #b1e2f2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bolder;
+        font-family: Verdana;
+    }
+    .order_amount{
+        width: 25%;
+        height: 5vh;
+        background-color: #b1e2f2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bolder;
+        font-family: Verdana;
+    }
+    .each_order_detail{
+        width: 70vw;
+        height: 40vw;
+        display: none;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        align-items: flex-start;
+        background-color: teal;
+        overflow-y: scroll;
+    }
+    .each_order_detail::-webkit-scrollbar-thumb{    /* custom scrool bar */
+        background-color: #30ba8f;
+    }
+    .each_order_detail::-webkit-scrollbar{
+        background-color: #4a4a4a;
+        width: 0.4rem;
+    }
+
+    .first_child{   /*container contains img */
+        width: 100%;
+        height: 80%;
+        background-color: black;
+        /* position: absolute; */
+    }
+
+    .second_child{  /*container contains  info about product */
+        background-color: white;
+        /* position: absolute; */
+    }
+    #second_child_container{   /*container which holds elements in second_child*/
+        display: flex;
+        justify-content:space-between;
+        width: 100%;
+        height : 20%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-content:center; /* where to align all the items */
+        align-items:flex-start;
+    }
+
+    .no_order{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;    
+    }
+
+
+    /* 370 600 767 1024 */
+
+    @media only screen and (min-width : 1024px){
+        .parent_container{ /* abstract */
+            background-color : orange;
+            height: 35vh;
+            width: 20%;
+            margin: 0.5rem 0.5rem; /*set margin for spacing btw the cls objects */
+        }
+        .each_order_detail{
+            height: 40vh;
+        }
+        .order_date{
+            font-size: 1.3rem;
+        }
+        .order_status{
+            font-size: 1.3rem;
+        }
+        .order_amount{
+            font-size: 1.3rem;
+        }
+    }
+    @media only screen and (max-width : 1024px){
+        .container{ /* we add right margin in cart so we need to reduce*/
+            margin-right: 0rem;
+        }
+        .parent_container{ /* container which holds first_child and second_child*/
+            background-color: aqua;
+            margin:0.5rem 0.3rem; /* set margin for spacing btw the cls objects*/
+            width : 20vw;
+            height:30vh;
+            /* position: relative;    */
+        }
+        .order_container{
+            width: 100%;
+        }
+        .order_date{
+            font-size: 1.2rem;
+        }
+        .order_status{
+            font-size: 1.2rem;
+        }
+        .order_amount{
+            font-size: 1.2rem;
+        }
+    }
+    @media only screen and (max-width : 767px){
+        .container{    /* we add right margin in cart so we need to reduce*/
+            margin-right: 0rem;
+        }
+        .parent_container{ /* container which holds first_child and second_child*/
+            background-color :red;
+            margin: 0.2rem 0rem;    /* set margin for spacing btw the cls objects*/
+            width: 30vw;
+            height: 35vh;
+        }
+        .each_order_detail{
+            height: 50vw;
+        }
+        .order_date{
+            font-size: 1.1rem;
+        }
+        .order_status{
+            font-size: 1.1rem;
+        }
+        .order_amount{
+            font-size: 1.1rem;
+        }
+    }
+    @media only screen and (max-width : 600px){
+        .container{   /* we add right margin in cart so we need to reduce*/
+            margin-right: 0rem;
+        }
+        .parent_container{   /* container which holds first_child and second_child*/
+            background-color : blueviolet;
+            margin: 0.2rem 0rem;  /* set margin for spacing btw the cls objects*/
+            width: 30vw;
+            height: 38vh;
+        }
+        .each_order_detail{
+            height: 40vh;
+            width: 100%;
+        }
+        .order_date{
+            font-size: 1.1rem;
+        }
+        .order_status{
+            font-size: 1.1rem;
+        }
+        .order_amount{
+            font-size: 1.1rem;
+        }
+    }
+    @media only screen and (max-width : 370px){
+        .container{ /* we add right margin in cart so we need to reduce*/
+            margin-right: 0rem;
+        }
+        .parent_container{  /* container which holds first_child and second_child*/
+            background-color:yellowgreen;
+            margin : 0.3rem 0.3rem;
+            width : 100vw;
+            height: 70vh;
+        }
+        .parent_container{
+            width: 30vh;
+            height: 40vh;
+        }
+        .each_order_detail{
+            height: 50vh;
+        }
+        .order_date{
+            width: 33%;
+            font-size: 0.7rem;
+        }
+        .order_status{
+            width:33%;
+            font-size: 0.7rem;
+        }
+        .order_amount{
+            width: 33%;
+            font-size: 0.7rem;
+        }
+    } 
+
+     

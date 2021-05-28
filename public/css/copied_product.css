@@ -1,0 +1,106 @@
+div{
+    height: 60vh;
+    width: 20.7vw;
+}
+
+body{
+    padding : 0;
+    margin : 0;
+}
+.cls{  /* class for internal div */
+    background-color: green;
+    margin : 0.5rem 3rem;
+}
+.temp{
+    background-color: red;
+} /*creating the empty class for applying styles to img tag*/
+
+/*id for the container holding the items of the class .cls */
+
+.container{
+        background-color:violet;
+        display: flex;
+        justify-content:space-between;  /* how to align horizontally*/
+        height: auto;      /* possibly overflow can occur, so set height to auto */
+        width: 96.6vw;
+        flex-wrap: wrap;   /* if more objects accumulates on one row then wrap */
+        flex-direction: row;
+        align-content: baseline; /* where to align all the items */
+        align-items:flex-start /* now to align individual items */
+}
+/*
+    min width : at and its above
+    max width : at and its below
+*/
+@media only screen and (max-width : 1200px){
+    .cls p {
+        font-size: 1.3rem;
+    }
+    .cls{ /* abstract */
+        background-color : violet;
+        height: 70vh;
+        margin: 0.5rem 3rem; /* set margin for spacing btw the cls objects*/
+    }
+    .temp{    /*apply style to the img, accoriding to the created .cls object*/
+        width: 20.7vw;
+        height: 70vh;
+        margin: 0.5rem 3rem;
+    }
+    .container{
+        width: 98.5vw;
+    }
+}
+@media only screen and (max-width : 1024px){
+    .cls{ /* abstract */
+        background-color: red;
+        margin:0.5rem 0rem; /* set margin for spacing btw the cls objects*/
+        width : 25vw;
+        height:70vh;    
+    }
+    .temp{      /*apply style to the img, accoriding to the created .cls object*/
+        width: 25vw;
+        height: 70vh;
+        margin:0.5rem 0rem;
+    }
+    .container{
+        width: 97.5vw;
+    }
+}
+@media only screen and (max-width : 767px){
+    .cls p {
+        font-size: 1rem;
+    }
+    .cls{ /* abstract */
+        background-color :violet;
+        margin: 0.5rem 0rem;    /* set margin for spacing btw the cls objects*/
+        width: 37vw;
+        height: 60vh;
+    }
+    .temp{   /*apply style to the img, accoriding to the created .cls object*/
+        width: 37vw;
+        height: 60vh;
+        margin: 0.5rem 0rem;
+    }
+    .container{
+        width: 96vw;
+    }
+}
+@media only screen and (max-width : 480px){
+    .cls p{
+        font-size : 0.8rem;
+    }
+    .cls{    /* abstract */
+        background-color : blueviolet;
+        margin: 1rem 0rem;  /* set margin for spacing btw the cls objects*/
+        width: 38vw;
+        height: 43vh;
+    }
+    .temp{      /*apply style to the img, accoriding to the created .cls object*/
+        width: 38vw;
+        height: 43vh;
+        margin: 1rem 0rem;
+    }
+    .container{
+        width: 96.5vw;
+    }
+}

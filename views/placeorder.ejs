@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type = "text/css" href = "css/placeorder.css">
+    <title>Place Order</title>
+    <script src="javascript/placeorder.js"></script>
+</head>
+<body>
+    <div class = "container">
+            <div class = "delivery_detail"><h1>Delivery Details</h1></div>
+            <input type = "text"  class = "delivery" id = "src_name" onclick="deselect_all()" placeholder="Name" required>
+
+            <!-- Country -->
+
+            <input type = "text"  class = "delivery" id = "src_country" onfocus="select_country()" placeholder = "Country" required readonly>
+            
+            <div class="drop_down" id = "country_drop_down">
+                <div class = "selected_option" value ="Choose" id ="selected1" onclick="display_select_box(1)" >Choose Country</div>
+                <div class="options" id = "option_container1">
+                    
+                    <% for(let i = 0; i < country.length; i++) { %>
+                         <div class="option" value = "val1" onclick = "change_box_value(this, 1)" > <%= country[i]  %> </div>
+                    <% } %>
+
+                </div>
+            </div>
+
+            <!-- state -->
+
+            <input type = "text"  class = "delivery" id = "src_state" onfocus="select_state()" placeholder = "State" required readonly>
+            
+            <div class="drop_down" id="state_drop_down">
+                <div class = "selected_option" value ="Choose" id ="selected2" onclick="display_select_box(2)" >Choose State</div>
+                <div class="options" id = "option_container2">
+
+                    <% for(let i = 0; i < state.length; i++) { %>
+                        <div class="option" value = "val1" onclick = "change_box_value(this, 2)" > <%= state[i]  %> </div>
+                    <% } %>
+            
+                </div>
+            </div>
+        
+            <!-- city -->
+
+            <input type = "text"  class = "delivery" id = "src_city" onfocus="select_city()"  placeholder = "City" required readonly>
+            <div class="drop_down" id = "city_drop_down">
+                <div class = "selected_option" value ="Choose" id ="selected3" onclick="display_select_box(3)" >Choose City</div>
+                <div class="options" id = "option_container3">
+                    
+                    <% for (let i = 0; i < city.length; i++) { %>
+                        <div class="option" value = "val1" onclick="change_box_value(this, 3)"><%= city[i] %></div>
+                    <% } %>
+
+                </div>
+            </div>
+
+            <input type = "text"  class = "delivery" id = "src_street" onclick="deselect_all()" placeholder="Street" required>
+    </div>
+
+    <div class="footer">
+        <div class = "order_form" onclick = "submit()">Order
+            <form action = "/order" method = "POST" hidden>
+                <input type="text" name = "name" id = "name" required>
+                <input type="text" name = "street" id = "street" required>
+                <input type="text" name = "city" id = "city" required>
+                <input type="text" name = "state" id = "state" required>
+                <input type="text" name = "country" id = "country" required>
+                <input type="submit" id = "order_submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- <div class="option" value = "val2" onclick="change_box_value(this, 2)">val2</div>
+                    <div class="option" value = "val3" onclick="change_box_value(this, 2)">val3</div>
+                    <div class="option" value = "val4" onclick="change_box_value(this, 2)">val4</div>
+                    <div class="option" value = "val5" onclick="change_box_value(this, 2)">val5</div>
+                    <div class="option" value = "val6" onclick="change_box_value(this, 2)">val6</div>
+                    <div class="option" value = "val7" onclick="change_box_value(this, 2)">val7</div>
+                    <div class="option" value = "val8" onclick="change_box_value(this, 2)">val8</div> -->

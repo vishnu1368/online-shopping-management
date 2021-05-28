@@ -1,0 +1,479 @@
+    html::-webkit-scrollbar {
+        display: none;
+    }
+    div{    /*set default height and width*/
+        height: 0vh;
+        width: 0vw;
+    }
+    body{           /*remove default padding and margin*/
+        padding : 0;
+        margin : 0;
+        background-color: teal;
+    }
+    form{
+        padding: 0;
+        margin: 0;
+    }
+    input:focus{
+        outline: none;
+    }
+    .container{
+        /*background-color:violet;*/
+        display: flex;
+        justify-content:space-between;  /* how to align horizontally*/
+        height: auto;      /* possibly overflow can occur, so set height to auto */
+        width: 96.6vw;
+        flex-wrap: wrap;   /* if more objects accumulates on one row then wrap */
+        flex-direction: row;
+        align-content:baseline; /* where to align all the items */
+        align-items:flex-start; /* now to align individual items */
+    }
+    .navigation{
+        width: 100vw;
+        height: 7vh;
+        /* background-color: slategray; */
+    }
+    .navigation_container{
+        display: flex;
+        background-color: #82CAFF;
+        justify-content:space-between;
+        width: 100vw;
+        height:7vh;
+    }
+    .home_btn{
+        border: none;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .search{
+        height: 7vh;
+    }
+    .form_search{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .search_txt{
+        /*height : 6vh; /*needed, since we group serach and search_btn together so it can't access its parent property*/
+        /* border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom-color: #00ab66;
+        border-bottom-width: 0.3rem;
+        background-color: slategray; */
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom-width: 0.5rem;
+        border-bottom-color: #00ab66; 
+        background-color: white; 
+        /* color: white; */
+        font-weight: 700;
+        width: 70%;
+    }
+    .search_txt::placeholder{
+        color:#708090;
+    }
+    .search_btn{
+        height: 7vh; /*needed, since we group serach and search_btn together so it can't access its parent property*/
+        font-weight: 700;
+        width: 20%;
+        cursor: pointer;
+    }
+   
+    .account_btn{
+        height: 7vh;
+        font-weight: 700;
+        border: none;
+        width: 100%;
+        cursor: pointer;
+    }
+    .parent_container{  /* class which holds first_child and second_child */
+        background-color: green;
+        margin : 0.5rem 3rem;
+    }
+
+     .first_child{   /*container contains img */
+        width: 100%;
+        height: 50%;
+        background-color: black;
+    }
+
+    .second_child{  /*container contains  info about product */
+        width: 100%;
+        height: 50%;
+        background-color: white;
+    }
+    #second_child_container{   /*container which holds elements in second_child*/
+        display: flex;
+        justify-content:space-between;
+        width: 100%;
+        height : 50%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-content:space-around; /* where to align all the items */
+        align-items:flex-start
+    }
+    .product_name{
+        display: inline;
+        width: 75%;
+        border: none;
+        margin-left: 20%;
+        margin-right: auto;
+        font-weight:bolder;
+    }
+    .product_price{
+        display: inline;
+        width: 75%;
+        border: none;
+        margin-left: 20%;
+        margin-right:auto;
+        font-weight:bolder;
+    }
+    .cart_btn:hover{
+        cursor: pointer;
+    }
+    .cart_btn{
+        border: 0px;
+        width: 75%;
+        padding: 0.4rem;
+        text-align: center;
+        display: block;  /*to display the cart btn in center */
+        margin-left: auto;
+        margin-right: auto;
+        background-color: green;
+        color: white;
+    }
+    .review{
+        display: inline;
+        width: 75%;
+        border: none;
+        margin-left: 20%;
+        margin-right:auto;
+        font-weight:bolder;
+    }
+    .review_count{
+        display: inline;
+        width: 75%;
+        border: none;
+        margin-left: 20%;
+        margin-right:auto;
+        font-weight:bolder;
+    }
+    .wishlist_btn{
+        border: 0px;
+        width: 75%;
+        padding: 0.4rem;
+        text-align: center;
+        display: block;  /*to display the cart btn in center */
+        margin-left: auto;
+        margin-right: auto;
+        background-color: green;
+        color: white;
+    }
+    .wishlist_btn:hover{
+        cursor: pointer;
+    }
+    .no_matchfound{
+        width: 100vw;
+        height: 93vh;
+        display:flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-content: center;
+        text-align: center;
+    }
+
+
+/*
+    min width : at and its above
+    max width : at and its below
+*/
+@media only screen and (min-width : 1024px){
+    .container{
+        width: 100vw;
+    }
+    .navigation_container{
+        position:fixed;
+        top : 0;
+    }
+    .home_btn{
+        font-size: 1.2rem;
+        width: 15%;
+    }
+    .search{
+        width: 60%;
+    }
+    .search_txt{
+        font-size: 1.4rem;
+    }
+    .search_btn{
+        font-size: 1.1rem;
+    }
+    .form_account_btn{
+        width: 17%;
+    }
+    .account_btn{
+        font-size: 1.2rem;
+    }
+    .parent_container{ /* abstract */
+        background-color : orange;
+        height: 70vh;
+        width: 30vw;
+        margin: 0.5rem 0.5rem; /* set margin for spacing btw the cls objects*/
+    }
+    .product_name{
+        font-size : 1.4rem;
+    }
+    .product_price{
+        font-size : 1.4rem;
+    }
+    .cart_btn{
+        font-size: 1.4rem;
+    }
+    .review{
+        font-size : 1.4rem;
+    }
+    .review_count{
+        font-size : 1.4rem;
+    }
+    .wishlist_btn{
+        font-size: 1.4rem;
+        background-color: blueviolet;
+    }
+    .no_matchfound{
+        font-size: 1.6rem;
+    }
+}
+@media only screen and (max-width : 1024px){
+    .container{
+        width: 100vw;
+    }
+    .navigation_container{
+        position:fixed;
+        top : 0;
+    }
+    .home_btn{
+        font-size: 1.1rem;
+        width: 15%;
+    }
+    .search{
+        width: 60%;
+    }
+    .search_txt{
+        font-size: 1.3rem;
+    }
+    .search_btn{
+        font-size: 1rem;
+    }
+    .form_account_btn{ /*parent of account btn from which account btn takes 100 % widht*/
+        width: 15%;
+    }
+    .account_btn{
+        font-size: 1.1rem;
+    }
+    .parent_container{ /* container which holds first_child and second_child*/
+        background-color: aqua;
+        margin:0.5rem 0.3rem; /* set margin for spacing btw the cls objects*/
+        width : 30vw;
+        height:70vh;    
+    }
+    .product_name{
+        font-size : 1.1rem;
+    }
+    .product_price{
+        font-size : 1.1rem;
+    }
+    .cart_btn{
+        font-size: 1.1rem;
+    }
+    .review{
+        font-size : 1.1rem;
+    }
+    .review_count{
+        font-size : 1.1rem;
+    }
+    .wishlist_btn{
+        font-size: 1.1rem;
+    }
+    .no_matchfound{
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (max-width : 767px){
+    .container{
+        width: 100vw;
+    }
+    .navigation_container{
+        position:fixed;
+        top : 0;
+    }
+    .home_btn{
+        font-size: 1.1rem;
+        width: 15%;
+    }
+    .search_txt{
+        font-size: 1.2rem;
+    }
+    .search{
+        width: 65%;
+    }
+    .search_btn{
+        font-size: 1.1rem;
+    }
+    .form_account_btn{
+        width: 18%;
+    }
+    .account_btn{
+        font-size: 1.1rem;
+    }
+    .parent_container{ /* container which holds first_child and second_child*/
+        background-color :red;
+        margin: 0.2rem 0rem;    /* set margin for spacing btw the cls objects*/
+        width: 30vw;
+        height: 55vh;
+    }
+    .product_name{
+        font-size : 0.96rem;
+    }
+    .product_price{
+        font-size : 0.96rem;
+    }
+    .cart_btn{
+        font-size: 0.96rem;
+    }
+    .review{
+        font-size : 0.96rem;
+    }
+    .review_count{
+        font-size : 0.96rem;
+    }
+    .wishlist_btn{
+        font-size: 0.96rem;
+    }
+    .no_matchfound{
+        font-size: 1.3rem;
+    }
+}
+@media only screen and (max-width : 600px){
+    .container{
+        width: 100vw;
+    }
+    .navigation_container{
+        position:fixed;
+        top : 0;
+    }
+    .home_btn{
+        display: none;
+    }
+    .search{
+        width: 77%;
+    }
+    .search_txt{
+        font-size: 1.1rem;
+    }
+    .search_btn{
+        font-size: 0.9rem;
+    }
+    .form_account_btn{
+        width: 23%;
+    }
+    .account_btn{
+        font-size: 1.1rem;
+    }
+    .parent_container{   /* container which holds first_child and second_child*/
+        background-color : blueviolet;
+        margin: 0.2rem 0rem;  /* set margin for spacing btw the cls objects*/
+        width: 48vw;
+        height: 53vh;
+    }
+    .product_name{
+        font-size : 0.9rem;
+    }
+    .product_price{
+        font-size : 0.9rem;
+    }
+    .cart_btn{
+        font-size: 0.9rem;
+    }
+    .review{
+        font-size : 0.9rem;
+    }
+    .review_count{
+        font-size : 0.9rem;
+    }
+    .wishlist_btn{
+        font-size: 0.9rem;
+    }
+    .no_matchfound{
+        font-size: 1.1rem;
+    }
+}
+@media only screen and (max-width : 370px){
+    .container{
+        width: 100vw;
+    }
+    .navigation{
+        margin-bottom: 9%;
+    }
+    .navigation_container{
+        height: 10vh;
+    }
+    .form_account_btn{
+        width: 23%;
+    }
+    .account_btn{
+        font-size: 1rem;
+        height: 100%;
+    }
+    .search{
+        width: 77%;
+        flex-direction: column;
+        height: 100%;
+    }
+    .search_txt{
+        width: 100%;
+        height: 65%;
+        border-bottom-width: 0.3rem;
+        font-size: 1rem;
+    }
+    .search_btn{
+        font-size: 0.95rem;
+        width: 30%;
+        height: 35%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .parent_container{  /* container which holds first_child and second_child*/
+        background-color:yellowgreen;
+        margin : 0.3rem 0.3rem;
+        width : 100vw;
+        height: 70vh;
+    }
+    .product_name{
+        font-size : 0.8rem;
+    }
+    .product_price{
+        font-size : 0.8rem;
+    }
+    .cart_btn{
+        font-size: 0.8rem;
+    }
+    .review{
+        font-size : 0.8rem;
+    }
+    .review_count{
+        font-size : 0.8rem;
+    }
+    .wishlist_btn{
+        font-size: 0.8rem;
+    }
+    .no_matchfound{
+        font-size: 1rem;
+    }
+}
