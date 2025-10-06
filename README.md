@@ -1,1 +1,9 @@
-An E-commerce Web based application that has the extensible search capabilities to retrieve the best-match products from the inventory. The application orchestrates authentication service, Cart service, Profile management Service, Search service, Order Service and shipment service to provide a better user experience for the customers. This project is begin built by using the knowledge of software design principles, variety of Data structures and the system design concepts.
+An E-commerce Web based application that has the extensible search capabilities to retrieve the best-match products from the inventory. 
+The application orchestrates,
+ - authentication service
+ - Cart service
+ - Profile management Serivce
+ - Search service
+ - Order Service and
+ - shipment service to provide a better user experience for the customers.
+This project is begin built by using the knowledge of software design principles, variety of Data structures and the sytem design concepts.
